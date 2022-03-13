@@ -20,6 +20,6 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     package_dir={"": "pytdproxy"},
-    packages=setuptools.find_packages(where="src"),
+    packages=setuptools.find_packages(where="pytdproxy"),
     python_requires=">=3.6",
 )
