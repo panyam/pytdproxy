@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pytdproxy",
-    version="0.0.1",
+    version="0.0.2",
     author="Sri Panyam",
     author_email="sripanyam@gmail.com",
     description="Python GRPC Bindings for tdproxy - A local proxy for TD Ameritrade API (including streaming API)",
