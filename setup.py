@@ -7,6 +7,7 @@ setuptools.setup(
     name="pytdproxy",
     version="0.0.1",
     author="Sri Panyam",
+    author_email="sripanyam@gmail.com",
     description="Python GRPC Bindings for tdproxy - A local proxy for TD Ameritrade API (including streaming API)",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -19,7 +20,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir={"": "pytdproxy"},
-    packages=setuptools.find_packages(where="pytdproxy"),
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
     python_requires=">=3.6",
 )
