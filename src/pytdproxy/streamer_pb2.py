@@ -15,7 +15,7 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18pytdproxy/streamer.proto\x12\x0etdproxy_protos\x1a\x1cgoogle/protobuf/struct.proto\"\x0e\n\x0c\x45mptyMessage\"\x1c\n\x0cSubscription\x12\x0c\n\x04name\x18\x01 \x01(\t\"4\n\x10SubscribeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\ntopic_name\x18\x02 \x01(\t\"j\n\x0bSendRequest\x12\x10\n\x08sub_name\x18\x01 \x01(\t\x12\x0f\n\x07service\x18\x02 \x01(\t\x12\x0f\n\x07\x63ommand\x18\x03 \x01(\t\x12\'\n\x06params\x18\x04 \x01(\x0b\x32\x17.google.protobuf.Struct\"\x1e\n\x0cSendResponse\x12\x0e\n\x06status\x18\x01 \x01(\x03\"0\n\x07Message\x12%\n\x04info\x18\x01 \x01(\x0b\x32\x17.google.protobuf.Struct2\xe9\x01\n\x0fStreamerService\x12H\n\tSubscribe\x12 .tdproxy_protos.SubscribeRequest\x1a\x17.tdproxy_protos.Message0\x01\x12I\n\x0bUnsubscribe\x12\x1c.tdproxy_protos.Subscription\x1a\x1c.tdproxy_protos.EmptyMessage\x12\x41\n\x04Send\x12\x1b.tdproxy_protos.SendRequest\x1a\x1c.tdproxy_protos.SendResponseB\x1aZ\x18legfinder/tdproxy/protosb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18pytdproxy/streamer.proto\x12\x0etdproxy_protos\x1a\x1cgoogle/protobuf/struct.proto\"\x0e\n\x0c\x45mptyMessage\"\x1c\n\x0cSubscription\x12\x0c\n\x04name\x18\x01 \x01(\t\"4\n\x10SubscribeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\ntopic_name\x18\x02 \x01(\t\"j\n\x0bSendRequest\x12\x10\n\x08sub_name\x18\x01 \x01(\t\x12\x0f\n\x07service\x18\x02 \x01(\t\x12\x0f\n\x07\x63ommand\x18\x03 \x01(\t\x12\'\n\x06params\x18\x04 \x01(\x0b\x32\x17.google.protobuf.Struct\"\x1e\n\x0cSendResponse\x12\x0e\n\x06status\x18\x01 \x01(\x03\"0\n\x07Message\x12%\n\x04info\x18\x01 \x01(\x0b\x32\x17.google.protobuf.Struct2\xe9\x01\n\x0fStreamerService\x12H\n\tSubscribe\x12 .tdproxy_protos.SubscribeRequest\x1a\x17.tdproxy_protos.Message0\x01\x12I\n\x0bUnsubscribe\x12\x1c.tdproxy_protos.Subscription\x1a\x1c.tdproxy_protos.EmptyMessage\x12\x41\n\x04Send\x12\x1b.tdproxy_protos.SendRequest\x1a\x1c.tdproxy_protos.SendResponseB\x10Z\x0etdproxy/protosb\x06proto3')
 
 
 
@@ -71,7 +71,7 @@ _STREAMERSERVICE = DESCRIPTOR.services_by_name['StreamerService']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'Z\030legfinder/tdproxy/protos'
+  DESCRIPTOR._serialized_options = b'Z\016tdproxy/protos'
   _EMPTYMESSAGE._serialized_start=74
   _EMPTYMESSAGE._serialized_end=88
   _SUBSCRIPTION._serialized_start=90
