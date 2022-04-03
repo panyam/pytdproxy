@@ -14,7 +14,7 @@ class ChainServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.GetChainInfo = channel.unary_unary(
+        self.GetChainInfo = channel.unary_stream(
                 '/protos.ChainService/GetChainInfo',
                 request_serializer=pytdproxy_dot_chains__pb2.GetChainInfoRequest.SerializeToString,
                 response_deserializer=pytdproxy_dot_chains__pb2.GetChainInfoResponse.FromString,
@@ -44,7 +44,7 @@ class ChainServiceServicer(object):
 
 def add_ChainServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'GetChainInfo': grpc.unary_unary_rpc_method_handler(
+            'GetChainInfo': grpc.unary_stream_rpc_method_handler(
                     servicer.GetChainInfo,
                     request_deserializer=pytdproxy_dot_chains__pb2.GetChainInfoRequest.FromString,
                     response_serializer=pytdproxy_dot_chains__pb2.GetChainInfoResponse.SerializeToString,
@@ -75,7 +75,7 @@ class ChainService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/protos.ChainService/GetChainInfo',
+        return grpc.experimental.unary_stream(request, target, '/protos.ChainService/GetChainInfo',
             pytdproxy_dot_chains__pb2.GetChainInfoRequest.SerializeToString,
             pytdproxy_dot_chains__pb2.GetChainInfoResponse.FromString,
             options, channel_credentials,
