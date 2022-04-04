@@ -21,6 +21,7 @@ DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x16pytdproxy/chai
 
 _OPTION = DESCRIPTOR.message_types_by_name['Option']
 _CHAIN = DESCRIPTOR.message_types_by_name['Chain']
+_CHAIN_OPTIONSBYPRICEENTRY = _CHAIN.nested_types_by_name['OptionsByPriceEntry']
 _GETCHAININFOREQUEST = DESCRIPTOR.message_types_by_name['GetChainInfoRequest']
 _GETCHAININFORESPONSE = DESCRIPTOR.message_types_by_name['GetChainInfoResponse']
 _GETCHAINREQUEST = DESCRIPTOR.message_types_by_name['GetChainRequest']
@@ -33,11 +34,19 @@ Option = _reflection.GeneratedProtocolMessageType('Option', (_message.Message,),
 _sym_db.RegisterMessage(Option)
 
 Chain = _reflection.GeneratedProtocolMessageType('Chain', (_message.Message,), {
+
+  'OptionsByPriceEntry' : _reflection.GeneratedProtocolMessageType('OptionsByPriceEntry', (_message.Message,), {
+    'DESCRIPTOR' : _CHAIN_OPTIONSBYPRICEENTRY,
+    '__module__' : 'pytdproxy.chains_pb2'
+    # @@protoc_insertion_point(class_scope:protos.Chain.OptionsByPriceEntry)
+    })
+  ,
   'DESCRIPTOR' : _CHAIN,
   '__module__' : 'pytdproxy.chains_pb2'
   # @@protoc_insertion_point(class_scope:protos.Chain)
   })
 _sym_db.RegisterMessage(Chain)
+_sym_db.RegisterMessage(Chain.OptionsByPriceEntry)
 
 GetChainInfoRequest = _reflection.GeneratedProtocolMessageType('GetChainInfoRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETCHAININFOREQUEST,
@@ -72,6 +81,8 @@ if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'Z\016tdproxy/protos'
+  _CHAIN_OPTIONSBYPRICEENTRY._options = None
+  _CHAIN_OPTIONSBYPRICEENTRY._serialized_options = b'8\001'
   _OPTION._serialized_start=65
   _OPTION._serialized_end=326
   _CHAIN._serialized_start=329
