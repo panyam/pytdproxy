@@ -14,6 +14,11 @@ class TradeServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
+        self.GetTrades = channel.unary_unary(
+                '/protos.TradeService/GetTrades',
+                request_serializer=pytdproxy_dot_trades__pb2.GetTradesRequest.SerializeToString,
+                response_deserializer=pytdproxy_dot_trades__pb2.GetTradesResponse.FromString,
+                )
         self.SaveTrades = channel.unary_unary(
                 '/protos.TradeService/SaveTrades',
                 request_serializer=pytdproxy_dot_trades__pb2.SaveTradesRequest.SerializeToString,
@@ -33,6 +38,12 @@ class TradeServiceStub(object):
 
 class TradeServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
+
+    def GetTrades(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
     def SaveTrades(self, request, context):
         """Missing associated documentation comment in .proto file."""
@@ -55,6 +66,11 @@ class TradeServiceServicer(object):
 
 def add_TradeServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
+            'GetTrades': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetTrades,
+                    request_deserializer=pytdproxy_dot_trades__pb2.GetTradesRequest.FromString,
+                    response_serializer=pytdproxy_dot_trades__pb2.GetTradesResponse.SerializeToString,
+            ),
             'SaveTrades': grpc.unary_unary_rpc_method_handler(
                     servicer.SaveTrades,
                     request_deserializer=pytdproxy_dot_trades__pb2.SaveTradesRequest.FromString,
@@ -79,6 +95,23 @@ def add_TradeServiceServicer_to_server(servicer, server):
  # This class is part of an EXPERIMENTAL API.
 class TradeService(object):
     """Missing associated documentation comment in .proto file."""
+
+    @staticmethod
+    def GetTrades(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/protos.TradeService/GetTrades',
+            pytdproxy_dot_trades__pb2.GetTradesRequest.SerializeToString,
+            pytdproxy_dot_trades__pb2.GetTradesResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def SaveTrades(request,
