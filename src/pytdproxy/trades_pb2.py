@@ -15,7 +15,7 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x16pytdproxy/trades.proto\x12\x06protos\x1a\x1cgoogle/protobuf/struct.proto\"F\n\tOrderBase\x12\x0b\n\x03\x62uy\x18\x01 \x01(\x08\x12\x10\n\x08quantity\x18\x02 \x01(\x05\x12\x1a\n\x12overridden_premium\x18\x03 \x01(\x01\"{\n\x06Single\x12%\n\norder_base\x18\x01 \x01(\x0b\x32\x11.protos.OrderBase\x12\x0e\n\x06symbol\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x61te_string\x18\x03 \x01(\t\x12\x14\n\x0cprice_string\x18\x04 \x01(\t\x12\x0f\n\x07is_call\x18\x05 \x01(\x08\"^\n\x06Spread\x12%\n\norder_base\x18\x01 \x01(\x0b\x32\x11.protos.OrderBase\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x1f\n\x07singles\x18\x03 \x03(\x0b\x32\x0e.protos.Single\"V\n\x05Order\x12 \n\x06single\x18\x01 \x01(\x0b\x32\x0e.protos.SingleH\x00\x12 \n\x06spread\x18\x02 \x01(\x0b\x32\x0e.protos.SpreadH\x00\x42\t\n\x07\x64\x65tails\"\xbb\x02\n\x05Trade\x12\x10\n\x08trade_id\x18\x01 \x01(\t\x12\x0e\n\x06symbol\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61te\x18\x03 \x01(\t\x12\x10\n\x08strategy\x18\x04 \x01(\t\x12\x0f\n\x07outlook\x18\x05 \x01(\t\x12\x1d\n\x06orders\x18\x06 \x03(\x0b\x32\r.protos.Order\x12)\n\x08metadata\x18\x07 \x01(\x0b\x32\x17.google.protobuf.Struct\x12\x1c\n\x14payoff_expected_gain\x18\x08 \x01(\x01\x12\x1c\n\x14payoff_expected_loss\x18\t \x01(\x01\x12\x18\n\x10payoff_gain_prob\x18\n \x01(\x01\x12\x12\n\npayoff_bpe\x18\x0b \x01(\x01\x12\x18\n\x10payoff_maxprofit\x18\x0c \x01(\x01\x12\x11\n\tload_date\x18\r \x01(\t\"F\n\x11SaveTradesRequest\x12\x1d\n\x06trades\x18\x01 \x03(\x0b\x32\r.protos.Trade\x12\x12\n\nlog_trades\x18\x02 \x01(\x08\"\x14\n\x12SaveTradesResponse\"\x1e\n\nTradeOrder\x12\x10\n\x08\x63riteria\x18\x01 \x01(\t\"\x82\x01\n\x0bTradeFilter\x12\x12\n\nby_symbols\x18\x01 \x03(\t\x12\x12\n\nstart_date\x18\x02 \x01(\t\x12\x10\n\x08\x65nd_date\x18\x03 \x01(\t\x12\x13\n\x0b\x62y_strategy\x18\x04 \x03(\t\x12\x10\n\x08min_gain\x18\x05 \x01(\x01\x12\x12\n\nmin_profit\x18\x06 \x01(\x01\"a\n\x11ListTradesRequest\x12&\n\tfilter_by\x18\x01 \x01(\x0b\x32\x13.protos.TradeFilter\x12$\n\x08order_by\x18\x02 \x01(\x0b\x32\x12.protos.TradeOrder\"\x14\n\x12ListTradesResponse\"Q\n\x13RemoveTradesRequest\x12&\n\tfilter_by\x18\x01 \x01(\x0b\x32\x13.protos.TradeFilter\x12\x12\n\nlog_trades\x18\x02 \x01(\x08\"\x16\n\x14RemoveTradesResponse2\xe9\x01\n\x0cTradeService\x12\x45\n\nSaveTrades\x12\x19.protos.SaveTradesRequest\x1a\x1a.protos.SaveTradesResponse\"\x00\x12\x45\n\nListTrades\x12\x19.protos.ListTradesRequest\x1a\x1a.protos.ListTradesResponse\"\x00\x12K\n\x0cRemoveTrades\x12\x1b.protos.RemoveTradesRequest\x1a\x1c.protos.RemoveTradesResponse\"\x00\x42\x10Z\x0etdproxy/protosb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x16pytdproxy/trades.proto\x12\x06protos\x1a\x1cgoogle/protobuf/struct.proto\"F\n\tOrderBase\x12\x0b\n\x03\x62uy\x18\x01 \x01(\x08\x12\x10\n\x08quantity\x18\x02 \x01(\x05\x12\x1a\n\x12overridden_premium\x18\x03 \x01(\x01\"{\n\x06Single\x12%\n\norder_base\x18\x01 \x01(\x0b\x32\x11.protos.OrderBase\x12\x0e\n\x06symbol\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x61te_string\x18\x03 \x01(\t\x12\x14\n\x0cprice_string\x18\x04 \x01(\t\x12\x0f\n\x07is_call\x18\x05 \x01(\x08\"^\n\x06Spread\x12%\n\norder_base\x18\x01 \x01(\x0b\x32\x11.protos.OrderBase\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x1f\n\x07singles\x18\x03 \x03(\x0b\x32\x0e.protos.Single\"V\n\x05Order\x12 \n\x06single\x18\x01 \x01(\x0b\x32\x0e.protos.SingleH\x00\x12 \n\x06spread\x18\x02 \x01(\x0b\x32\x0e.protos.SpreadH\x00\x42\t\n\x07\x64\x65tails\"\xbb\x02\n\x05Trade\x12\x10\n\x08trade_id\x18\x01 \x01(\t\x12\x0e\n\x06symbol\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61te\x18\x03 \x01(\t\x12\x10\n\x08strategy\x18\x04 \x01(\t\x12\x0f\n\x07outlook\x18\x05 \x01(\t\x12\x1d\n\x06orders\x18\x06 \x03(\x0b\x32\r.protos.Order\x12)\n\x08metadata\x18\x07 \x01(\x0b\x32\x17.google.protobuf.Struct\x12\x1c\n\x14payoff_expected_gain\x18\x08 \x01(\x01\x12\x1c\n\x14payoff_expected_loss\x18\t \x01(\x01\x12\x18\n\x10payoff_gain_prob\x18\n \x01(\x01\x12\x12\n\npayoff_bpe\x18\x0b \x01(\x01\x12\x18\n\x10payoff_maxprofit\x18\x0c \x01(\x01\x12\x11\n\tload_date\x18\r \x01(\t\"$\n\x10GetTradesRequest\x12\x10\n\x08trade_id\x18\x01 \x03(\t\"\x88\x01\n\x11GetTradesResponse\x12\x35\n\x06trades\x18\x01 \x03(\x0b\x32%.protos.GetTradesResponse.TradesEntry\x1a<\n\x0bTradesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1c\n\x05value\x18\x02 \x01(\x0b\x32\r.protos.Trade:\x02\x38\x01\"F\n\x11SaveTradesRequest\x12\x1d\n\x06trades\x18\x01 \x03(\x0b\x32\r.protos.Trade\x12\x12\n\nlog_trades\x18\x02 \x01(\x08\"\x14\n\x12SaveTradesResponse\"\x1e\n\nTradeOrder\x12\x10\n\x08\x63riteria\x18\x01 \x01(\t\"\x82\x01\n\x0bTradeFilter\x12\x12\n\nby_symbols\x18\x01 \x03(\t\x12\x12\n\nstart_date\x18\x02 \x01(\t\x12\x10\n\x08\x65nd_date\x18\x03 \x01(\t\x12\x13\n\x0b\x62y_strategy\x18\x04 \x03(\t\x12\x10\n\x08min_gain\x18\x05 \x01(\x01\x12\x12\n\nmin_profit\x18\x06 \x01(\x01\"a\n\x11ListTradesRequest\x12&\n\tfilter_by\x18\x01 \x01(\x0b\x32\x13.protos.TradeFilter\x12$\n\x08order_by\x18\x02 \x01(\x0b\x32\x12.protos.TradeOrder\"\x14\n\x12ListTradesResponse\"Q\n\x13RemoveTradesRequest\x12&\n\tfilter_by\x18\x01 \x01(\x0b\x32\x13.protos.TradeFilter\x12\x12\n\nlog_trades\x18\x02 \x01(\x08\"\x16\n\x14RemoveTradesResponse2\xad\x02\n\x0cTradeService\x12\x42\n\tGetTrades\x12\x18.protos.GetTradesRequest\x1a\x19.protos.GetTradesResponse\"\x00\x12\x45\n\nSaveTrades\x12\x19.protos.SaveTradesRequest\x1a\x1a.protos.SaveTradesResponse\"\x00\x12\x45\n\nListTrades\x12\x19.protos.ListTradesRequest\x1a\x1a.protos.ListTradesResponse\"\x00\x12K\n\x0cRemoveTrades\x12\x1b.protos.RemoveTradesRequest\x1a\x1c.protos.RemoveTradesResponse\"\x00\x42\x10Z\x0etdproxy/protosb\x06proto3')
 
 
 
@@ -24,6 +24,9 @@ _SINGLE = DESCRIPTOR.message_types_by_name['Single']
 _SPREAD = DESCRIPTOR.message_types_by_name['Spread']
 _ORDER = DESCRIPTOR.message_types_by_name['Order']
 _TRADE = DESCRIPTOR.message_types_by_name['Trade']
+_GETTRADESREQUEST = DESCRIPTOR.message_types_by_name['GetTradesRequest']
+_GETTRADESRESPONSE = DESCRIPTOR.message_types_by_name['GetTradesResponse']
+_GETTRADESRESPONSE_TRADESENTRY = _GETTRADESRESPONSE.nested_types_by_name['TradesEntry']
 _SAVETRADESREQUEST = DESCRIPTOR.message_types_by_name['SaveTradesRequest']
 _SAVETRADESRESPONSE = DESCRIPTOR.message_types_by_name['SaveTradesResponse']
 _TRADEORDER = DESCRIPTOR.message_types_by_name['TradeOrder']
@@ -66,6 +69,28 @@ Trade = _reflection.GeneratedProtocolMessageType('Trade', (_message.Message,), {
   # @@protoc_insertion_point(class_scope:protos.Trade)
   })
 _sym_db.RegisterMessage(Trade)
+
+GetTradesRequest = _reflection.GeneratedProtocolMessageType('GetTradesRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETTRADESREQUEST,
+  '__module__' : 'pytdproxy.trades_pb2'
+  # @@protoc_insertion_point(class_scope:protos.GetTradesRequest)
+  })
+_sym_db.RegisterMessage(GetTradesRequest)
+
+GetTradesResponse = _reflection.GeneratedProtocolMessageType('GetTradesResponse', (_message.Message,), {
+
+  'TradesEntry' : _reflection.GeneratedProtocolMessageType('TradesEntry', (_message.Message,), {
+    'DESCRIPTOR' : _GETTRADESRESPONSE_TRADESENTRY,
+    '__module__' : 'pytdproxy.trades_pb2'
+    # @@protoc_insertion_point(class_scope:protos.GetTradesResponse.TradesEntry)
+    })
+  ,
+  'DESCRIPTOR' : _GETTRADESRESPONSE,
+  '__module__' : 'pytdproxy.trades_pb2'
+  # @@protoc_insertion_point(class_scope:protos.GetTradesResponse)
+  })
+_sym_db.RegisterMessage(GetTradesResponse)
+_sym_db.RegisterMessage(GetTradesResponse.TradesEntry)
 
 SaveTradesRequest = _reflection.GeneratedProtocolMessageType('SaveTradesRequest', (_message.Message,), {
   'DESCRIPTOR' : _SAVETRADESREQUEST,
@@ -128,6 +153,8 @@ if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'Z\016tdproxy/protos'
+  _GETTRADESRESPONSE_TRADESENTRY._options = None
+  _GETTRADESRESPONSE_TRADESENTRY._serialized_options = b'8\001'
   _ORDERBASE._serialized_start=64
   _ORDERBASE._serialized_end=134
   _SINGLE._serialized_start=136
@@ -138,22 +165,28 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _ORDER._serialized_end=443
   _TRADE._serialized_start=446
   _TRADE._serialized_end=761
-  _SAVETRADESREQUEST._serialized_start=763
-  _SAVETRADESREQUEST._serialized_end=833
-  _SAVETRADESRESPONSE._serialized_start=835
-  _SAVETRADESRESPONSE._serialized_end=855
-  _TRADEORDER._serialized_start=857
-  _TRADEORDER._serialized_end=887
-  _TRADEFILTER._serialized_start=890
-  _TRADEFILTER._serialized_end=1020
-  _LISTTRADESREQUEST._serialized_start=1022
-  _LISTTRADESREQUEST._serialized_end=1119
-  _LISTTRADESRESPONSE._serialized_start=1121
-  _LISTTRADESRESPONSE._serialized_end=1141
-  _REMOVETRADESREQUEST._serialized_start=1143
-  _REMOVETRADESREQUEST._serialized_end=1224
-  _REMOVETRADESRESPONSE._serialized_start=1226
-  _REMOVETRADESRESPONSE._serialized_end=1248
-  _TRADESERVICE._serialized_start=1251
-  _TRADESERVICE._serialized_end=1484
+  _GETTRADESREQUEST._serialized_start=763
+  _GETTRADESREQUEST._serialized_end=799
+  _GETTRADESRESPONSE._serialized_start=802
+  _GETTRADESRESPONSE._serialized_end=938
+  _GETTRADESRESPONSE_TRADESENTRY._serialized_start=878
+  _GETTRADESRESPONSE_TRADESENTRY._serialized_end=938
+  _SAVETRADESREQUEST._serialized_start=940
+  _SAVETRADESREQUEST._serialized_end=1010
+  _SAVETRADESRESPONSE._serialized_start=1012
+  _SAVETRADESRESPONSE._serialized_end=1032
+  _TRADEORDER._serialized_start=1034
+  _TRADEORDER._serialized_end=1064
+  _TRADEFILTER._serialized_start=1067
+  _TRADEFILTER._serialized_end=1197
+  _LISTTRADESREQUEST._serialized_start=1199
+  _LISTTRADESREQUEST._serialized_end=1296
+  _LISTTRADESRESPONSE._serialized_start=1298
+  _LISTTRADESRESPONSE._serialized_end=1318
+  _REMOVETRADESREQUEST._serialized_start=1320
+  _REMOVETRADESREQUEST._serialized_end=1401
+  _REMOVETRADESRESPONSE._serialized_start=1403
+  _REMOVETRADESRESPONSE._serialized_end=1425
+  _TRADESERVICE._serialized_start=1428
+  _TRADESERVICE._serialized_end=1729
 # @@protoc_insertion_point(module_scope)
